@@ -147,7 +147,7 @@ Optimasi Random Forest dilakukan menggunakan tiga metode:
 
 ---
 
-## 📈 Evaluasi Model
+## 📈 Evaluasi dan Hasil Model
 
 Performa model dievaluasi menggunakan metrik:
 
@@ -162,6 +162,21 @@ Model terbaik dipilih berdasarkan:
 - Nilai RMSE terkecil
 - Nilai MAPE terkecil
 - Nilai R² tertinggi
+
+### Hasil Evaluasi
+
+| Model | Hyperparameter Tuning | MAE | RMSE | MAPE (%) | R² |
+|------|-----------------------:|----:|----:|----:|----:|
+| Linear Regression | Grid Search | 4634.90 | 12120.24 | 9.39 | 0.8775 |
+| Linear Regression | Random Search | 4634.90 | 12120.24 | 9.39 | 0.8775 |
+| Linear Regression | Bayesian Optimization | 4634.90 | 12120.24 | 9.39 | 0.8775 |
+| Random Forest Regression | Grid Search | **2028.19** | **4566.37** | **3.67** | **0.9826** |
+| Random Forest Regression | Random Search | 2135.08 | 4890.55 | 3.78 | 0.9800 |
+| Random Forest Regression | Bayesian Optimization | **2028.19** | **4566.37** | **3.67** | **0.9826** |
+
+### Ringkasan Hasil
+
+Berdasarkan hasil evaluasi, **Random Forest Regression** menghasilkan performa yang lebih baik dibandingkan **Linear Regression** pada seluruh metrik evaluasi. Model terbaik diperoleh menggunakan **Grid Search** dan **Bayesian Optimization**, yang menghasilkan nilai **MAE sebesar 2028.19**, **RMSE sebesar 4566.37**, **MAPE sebesar 3.67%**, dan **R² sebesar 0.9826**. Hasil tersebut menunjukkan bahwa model mampu memprediksi harga komoditas pangan bulanan dengan tingkat kesalahan yang rendah serta memiliki kemampuan yang sangat baik dalam menjelaskan variasi data.
 
 ---
 
